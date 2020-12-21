@@ -12,7 +12,8 @@ export class Home extends React.Component {
 
 		this.state = {
 			songList: [],
-			currentSong: 0
+			currentSong: 0,
+			volumeLevel: 50
 
 			// songList: [
 			// 	{
@@ -132,8 +133,24 @@ export class Home extends React.Component {
 					</a>
 				</div>
 				<audio
+					volume={this.state.volumeLevel / 100}
 					src={this.state.currentSong.url}
 					ref={el => (this.player = el)}
+				/>{" "}
+				<label htmlFor="points">Volume: {this.state.volumeLevel}</label>
+				<input
+					type="range"
+					id="points"
+					name="points"
+					min="0"
+					max="100"
+					value={this.state.volumeLevel}
+					onInput={event =>
+						(this.player.volume = event.target.value / 100)
+					}
+					onChange={event =>
+						this.setState({ volumeLevel: event.target.value })
+					}
 				/>{" "}
 				<div className="mx-auto col-4 d-flex justify-content-between">
 					<a href="http://www.edianibarrola.com">
