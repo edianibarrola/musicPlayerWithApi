@@ -90,21 +90,23 @@ export class Home extends React.Component {
 					<h1>Annoying Music Player</h1>
 				</div>
 				<div className="listBox col-7 mx-auto">
-					<ol className="  col-6 mx-auto light ">
-						{this.state.songList.map((song, index) => {
-							return (
-								<li
-									tabIndex={0}
-									key={index}
-									onClick={() => this.startPlay(index)}>
-									<span className="fa-li">
-										<i className="fas fa-music" />
-									</span>
-									{song.name}
-								</li>
-							);
-						})}
-					</ol>
+					<nav className="listBox">
+						<ol className="  col-6 mx-auto light ">
+							{this.state.songList.map((song, index) => {
+								return (
+									<li
+										tabIndex={0}
+										key={index}
+										onClick={() => this.startPlay(index)}>
+										<span className="fa-li">
+											<i className="fas fa-music" />
+										</span>
+										{song.name}
+									</li>
+								);
+							})}
+						</ol>
+					</nav>
 				</div>
 				<div className="controls col-6 align-items-center mx-auto d-flex justify-content-between">
 					<img src={marioImage} />
@@ -150,6 +152,7 @@ export class Home extends React.Component {
 					ref={el => (this.player = el)}
 				/>{" "}
 				<label htmlFor="points">Volume: {this.state.volumeLevel}</label>
+				{"   "}
 				<input
 					type="range"
 					id="points"
@@ -164,16 +167,18 @@ export class Home extends React.Component {
 						this.setState({ volumeLevel: event.target.value })
 					}
 				/>{" "}
-				<div className="mx-auto col-4 d-flex justify-content-between">
+				<div className="mx-auto col-5 d-flex align-items-center justify-content-between">
 					<a href="http://www.edianibarrola.com">
 						Made by EdianSmells
 					</a>
 					<a href="http://www.twitter.com/ediansmells">
 						<i className="fab fa-twitter" />
 					</a>
+					{"  "}
 					<a href="http://github.com/edianibarrola">
 						<i className="fab fa-github-alt" />
 					</a>
+					{"  "}
 					<a href="http://www.instagram.com/the_garden_of_edian/">
 						<i className="fab fa-instagram" />
 					</a>
