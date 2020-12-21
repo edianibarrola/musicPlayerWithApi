@@ -83,52 +83,54 @@ export class Home extends React.Component {
 
 	render() {
 		return (
-			<div className="text-center col-6 mx-auto mt-5 bg-dark">
+			<div className="text-center bigListBox  col-10 mx-auto mt-5 bg-dark">
 				<h1>Annoying Music Player</h1>
-				<ol className="col-4 mx-auto light ">
-					{this.state.songList.map((song, index) => {
-						return (
-							<li
-								tabIndex={0}
-								key={index}
-								onClick={() => this.startPlay(index)}>
-								<span className="fa-li">
-									<i className="fas fa-music" />
-								</span>
-								{song.name}
-							</li>
-						);
-					})}
-				</ol>
-				<div className=" col-3 mx-auto d-flex justify-content-around">
+				<div className="listBox col-7 mx-auto">
+					<ol className="  col-6 mx-auto light ">
+						{this.state.songList.map((song, index) => {
+							return (
+								<li
+									tabIndex={0}
+									key={index}
+									onClick={() => this.startPlay(index)}>
+									<span className="fa-li">
+										<i className="fas fa-music" />
+									</span>
+									{song.name}
+								</li>
+							);
+						})}
+					</ol>
+				</div>
+				<div className="controls col-3 mx-auto d-flex justify-content-around">
 					<a
 						onClick={() =>
 							this.startPlay(this.state.currentSong - 1)
 						}>
-						<i className="fas fa-caret-square-left" />
+						<i className="fas fa-caret-square-left fa-4x" />
 					</a>
 					<a
 						ref={el => (this.playButton = el)}
 						onClick={() => this.startPlay(this.state.currentSong)}>
-						<i className="fas fa-play" />
+						<i className="fas fa-play fa-4x" />
 					</a>
 					<a
 						ref={el => (this.pauseButton = el)}
 						onClick={() => this.pausePlay()}>
-						<i className="fas fa-pause-circle" />
+						<i className="fas fa-pause-circle fa-4x" />
 					</a>
 					<a
 						onClick={() =>
 							this.startPlay(this.state.currentSong + 1)
 						}>
-						<i className="fas fa-caret-square-right" />
+						<i className="fas fa-caret-square-right fa-4x" />
 					</a>
 				</div>
 				<audio
 					src={this.state.currentSong.url}
 					ref={el => (this.player = el)}
 				/>{" "}
-				<div className="mx-auto fixed-bottom col-3 d-flex justify-content-between">
+				<div className="mx-auto col-4 d-flex justify-content-between">
 					<a href="http://www.edianibarrola.com">
 						Made by EdianSmells
 					</a>
