@@ -3,6 +3,7 @@ import { SongListMaker } from "./SongListMaker";
 import PropTypes from "prop-types";
 //include images into your bundle
 import rigoImage from "../../img/rigo-baby.jpg";
+import marioImage from "/workspace/musicPlayer/src/img/dancingmario.gif";
 
 //create your first component
 export class Home extends React.Component {
@@ -84,7 +85,11 @@ export class Home extends React.Component {
 	render() {
 		return (
 			<div className="text-center bigListBox  col-10 mx-auto mt-5 bg-dark">
-				<h1>Annoying Music Player</h1>
+				<div className="d-flex justify-content-between">
+					<img src={marioImage} />
+					<h1>Annoying Music Player</h1>
+					<img src={marioImage} />
+				</div>
 				<div className="listBox col-7 mx-auto">
 					<ol className="  col-6 mx-auto light ">
 						{this.state.songList.map((song, index) => {

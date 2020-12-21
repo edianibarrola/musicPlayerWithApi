@@ -13,6 +13,7 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
+
 body {
     font-family: 'Press Start 2P', cursive;
     font-size: small;
@@ -21,8 +22,12 @@ body {
     text-shadow: 1px 1px 0px #ff0000;
     
 }
+img {
+    width:10%;
+    height:10%;
+}
 h1{
-    margin-top:2%;
+    
     padding:2%;
 }
 ol {
@@ -42,36 +47,37 @@ li {
 .listBox {
     
     border:3px groove rgb(196, 195, 195);
-    -webkit-box-shadow: 0px 0px 15px 8px #000000; 
-box-shadow: 0px 0px 15px 8px #000000;
+    -webkit-box-shadow: 0px 15px 15px 20px #000000; 
+    box-shadow: 0px 15px 15px 20px #000000;
     background: rgb(145,146,147);
-background: linear-gradient(90deg, rgba(145,146,147,1) 0%, rgba(64,64,64,1) 10%, rgba(64,64,64,1) 90%, rgba(145,146,147,1) 100%);
+    background: linear-gradient(90deg, rgba(145,146,147,1) 0%, rgba(64,64,64,1) 10%, rgba(64,64,64,1) 90%, rgba(145,146,147,1) 100%);
 }
 .bigListBox{
-    -webkit-box-shadow: 0px 0px 15px 8px #000000; 
-box-shadow: 0px 0px 15px 8px #000000;
+    
+    -webkit-box-shadow: 0px 15px 15px 20px #000000; 
+    box-shadow: 0px 15px 15px 20px #000000;
     border-radius:10px;
-}
+    background: rgb(131,131,131);
+    background: linear-gradient(90deg, rgba(131,131,131,1) 0%, rgba(80,80,80,1) 4%, rgba(80,80,80,1) 96%, rgba(131,131,131,1) 100%);}
 li:nth-child(even) {
-   background: rgb(145,146,147);
-background: linear-gradient(90deg, rgba(145,146,147,1) 0%, rgba(64,64,64,1) 10%, rgba(64,64,64,1) 90%, rgba(145,146,147,1) 100%);
+    background: rgb(145,146,147);
+    background: linear-gradient(90deg, rgba(145,146,147,1) 0%, rgba(64,64,64,1) 10%, rgba(64,64,64,1) 90%, rgba(145,146,147,1) 100%);
 
-   
 }
 li:nth-child(odd) {
     background: rgb(208,208,208);
 background: linear-gradient(90deg, rgba(208,208,208,1) 0%, rgba(129,128,128,1) 10%, rgba(129,128,128,1) 90%, rgba(208,208,208,1) 100%);
-   background-color: rgb(148, 147, 147);
+    background-color: rgb(148, 147, 147);
 }
 a:link {
-  color: white;
-  background-color: transparent;
-  text-decoration: none;
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
 }
 a:visited {
-  color: lightgray;
-  background-color: transparent;
-  text-decoration: none;
+    color: lightgray;
+    background-color: transparent;
+    text-decoration: none;
 }
 li:hover{   
     color:silver;
@@ -80,3 +86,4 @@ li:hover{
 a:target{
     color: silver;
 }
+
