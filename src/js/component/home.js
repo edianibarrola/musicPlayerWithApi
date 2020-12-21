@@ -85,11 +85,11 @@ export class Home extends React.Component {
 		return (
 			<div className="text-center col-6 mx-auto mt-5 bg-dark">
 				<h1>Annoying Music Player</h1>
-
 				<ol className="col-4 mx-auto light ">
 					{this.state.songList.map((song, index) => {
 						return (
 							<li
+								tabIndex={0}
 								key={index}
 								onClick={() => this.startPlay(index)}>
 								<span className="fa-li">
@@ -127,7 +127,21 @@ export class Home extends React.Component {
 				<audio
 					src={this.state.currentSong.url}
 					ref={el => (this.player = el)}
-				/>
+				/>{" "}
+				<div className="mx-auto fixed-bottom col-3 d-flex justify-content-between">
+					<a href="http://www.edianibarrola.com">
+						Made by EdianSmells
+					</a>
+					<a href="http://www.twitter.com/ediansmells">
+						<i className="fab fa-twitter" />
+					</a>
+					<a href="http://github.com/edianibarrola">
+						<i className="fab fa-github-alt" />
+					</a>
+					<a href="http://www.instagram.com/the_garden_of_edian/">
+						<i className="fab fa-instagram" />
+					</a>
+				</div>
 			</div>
 		);
 	}

@@ -22,3 +22,20 @@ ol {
 li:nth-child(even) {
    background-color: gray;
 }
+a:link {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:visited {
+  color: lightgray;
+  background-color: transparent;
+  text-decoration: none;
+}
+li:hover{   
+    color:green;
+
+}
+a:target{
+    color: purple;
+}
