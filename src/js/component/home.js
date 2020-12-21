@@ -87,9 +87,7 @@ export class Home extends React.Component {
 		return (
 			<div className="text-center bigListBox  col-10 mx-auto mt-5 bg-dark">
 				<div className="d-flex justify-content-between">
-					<img src={marioImage} />
 					<h1>Annoying Music Player</h1>
-					<img src={marioImage} />
 				</div>
 				<div className="listBox col-7 mx-auto">
 					<ol className="  col-6 mx-auto light ">
@@ -108,7 +106,8 @@ export class Home extends React.Component {
 						})}
 					</ol>
 				</div>
-				<div className="controls col-3 mx-auto d-flex justify-content-around">
+				<div className="controls col-6 align-items-center mx-auto d-flex justify-content-between">
+					<img src={marioImage} />
 					<a
 						onClick={() =>
 							this.startPlay(this.state.currentSong - 1)
@@ -126,11 +125,24 @@ export class Home extends React.Component {
 						<i className="fas fa-pause-circle fa-4x" />
 					</a>
 					<a
+						ref={el => (this.shuffleButton = el)}
+						onClick={() =>
+							this.startPlay(
+								Math.floor(
+									Math.random() * this.state.songList.length
+								)
+							)
+						}>
+						<i className="fas fa-random fa-4x" />
+					</a>
+
+					<a
 						onClick={() =>
 							this.startPlay(this.state.currentSong + 1)
 						}>
 						<i className="fas fa-caret-square-right fa-4x" />
 					</a>
+					<img className="img2" src={marioImage} />
 				</div>
 				<audio
 					volume={this.state.volumeLevel / 100}

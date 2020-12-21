@@ -23,11 +23,15 @@ body {
     
 }
 img {
-    width:10%;
-    height:10%;
+    width:25%;
+    
+}
+.img2 {
+    -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
 }
 h1{
-    
+    margin:auto;
     padding:2%;
 }
 ol {
@@ -56,7 +60,7 @@ li {
     
     -webkit-box-shadow: 0px 15px 15px 20px #000000; 
     box-shadow: 0px 15px 15px 20px #000000;
-    border-radius:10px;
+    border-radius:50px;
     background: rgb(131,131,131);
     background: linear-gradient(90deg, rgba(131,131,131,1) 0%, rgba(80,80,80,1) 4%, rgba(80,80,80,1) 96%, rgba(131,131,131,1) 100%);}
 li:nth-child(even) {
@@ -81,6 +85,7 @@ a:visited {
 }
 li:hover{   
     color:silver;
+    background:lightgreen!important;
 
 }
 a:target{
