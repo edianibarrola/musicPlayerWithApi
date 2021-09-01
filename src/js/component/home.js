@@ -3,7 +3,6 @@ import { SongListMaker } from "./SongListMaker";
 import PropTypes from "prop-types";
 //include images into your bundle
 import rigoImage from "../../img/rigo-baby.jpg";
-import marioImage from "/workspace/musicPlayer/src/img/dancingmario.gif";
 
 //create your first component
 export class Home extends React.Component {
@@ -109,7 +108,7 @@ export class Home extends React.Component {
 					</nav>
 				</div>
 				<div className="controls col-6 align-items-center mx-auto d-flex justify-content-between">
-					<img src={marioImage} />
+					<img src="https://res.cloudinary.com/petrep/image/upload/v1630456383/nerdstuff/dancing-mario_nr3hh9.gif" />
 					<a
 						onClick={() =>
 							this.startPlay(this.state.currentSong - 1)
@@ -144,7 +143,10 @@ export class Home extends React.Component {
 						}>
 						<i className="fas fa-caret-square-right fa-4x" />
 					</a>
-					<img className="img2" src={marioImage} />
+					<img
+						className="img2"
+						src="https://res.cloudinary.com/petrep/image/upload/v1630456383/nerdstuff/dancing-mario_nr3hh9.gif"
+					/>
 				</div>
 				<audio
 					volume={this.state.volumeLevel / 100}
